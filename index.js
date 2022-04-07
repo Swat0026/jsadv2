@@ -18,6 +18,7 @@ class Employee{
         cart.pername=document.getElementById("empname").value;
         cart.persal=document.getElementById("empsal").value;
         empcart.push(cart);
+        var myjson=JSON.stringify(empcart);
 
     
 
