@@ -2,7 +2,7 @@
    
    
 
-    var html="<table><tr><th>ID</th><th>Name</th><th>Total Salary</th></tr>"
+    var html="<table><tr><th>ID</th><th>Name</th><th>Total Salary</th><th>Updated Salary</th></tr>"
     var html1="</table>";
     
 
