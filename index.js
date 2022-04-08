@@ -32,10 +32,11 @@ class Employee{
         cart.pername=document.getElementById("empname").value;
         cart.persal=document.getElementById("empsal").value;
         empcart.push(cart);
+        this.display();              /* added in reference to displaying in empclass function rather than dispalying in Addclass function */
     }
         // var myjson=JSON.stringify(empcart);
         display(){
-            // var html2="";
+            var html2="";
 
             //     html2+="<tr><td>"+this.id+"</td><td>"+this.name+"</td><td>"+this.basicsalary+"</td><td class='del'>Delete</td></tr>"
                
@@ -46,10 +47,16 @@ class Employee{
             try{
                 var html2="";
                 empcart.forEach((element) => {
-                    var mul=element.persal*1.10;
+                    if(element.persal>0) {
+                        var mul=element.persal*1.10;
                     html2+="<tr><td>"+element.perid+"</td><td>"+element.pername+"</td><td>"+element.persal+"</td><td>"+mul+"</td></tr>"
-                });
-                document.getElementById("output").innerHTML=html+html2+html1;
+                }else{
+                    console.log(element.persal)
+
+                
+                    }
+                });document.getElementById("output").innerHTML=html+html2+html1;
+                    
 
             } catch (error){
                 console.log(error)
@@ -68,8 +75,8 @@ class Employee{
       document.getElementById("button").addEventListener("click", ()=>{
         var empl=new Employee();
         empl.empclass();
-        empl.display();
-
+        // empl.display();         
+ 
       });
 
         // empl.empclass();
