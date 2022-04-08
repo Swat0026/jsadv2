@@ -1,8 +1,9 @@
-    import {id ,name,salary} from "./index2.js"
+   "use strict";
+   import {id ,name,salary} from "./index2.js";
     console.log(id);
    
 
-    var html="<table><tr><th>ID</th><th>Name</th><th>Total Salary</th><th>Updated Salary</th></tr>"
+     var html="<table><tr><th>ID</th><th>Name</th><th>Total Salary</th><th>Updated Salary</th></tr>";
     var html1="</table>";
     var html2="";
     html2+=`<tr>
@@ -18,7 +19,7 @@
 var empcart=[];
 class Employee{
     empclass(){
-         var empid=document.getElementById("empid").value;
+         var empid=document.getElementById("empid").value
          var empname=document.getElementById("empname").value;
          var empsal = parseInt(document.getElementById("empsal").value);
          if(empid==""||empname==""||empsal==""){
@@ -31,6 +32,9 @@ class Employee{
         cart.pername=document.getElementById("empname").value;
         cart.persal=document.getElementById("empsal").value;
         empcart.push(cart);
+        empcart.forEach(element2=>{
+            element2.persal=30000;
+        });
         this.display(); 
 
          }
