@@ -1,9 +1,17 @@
-
-   
+    import {id ,name,salary} from "./index2.js"
+    console.log(id);
    
 
     var html="<table><tr><th>ID</th><th>Name</th><th>Total Salary</th><th>Updated Salary</th></tr>"
     var html1="</table>";
+    var html2="";
+    html2+=`<tr>
+    <td>${id}</td>
+    <td>${name}</td>
+    <td>${salary}</td>
+    <td></td>
+    </tr>`;
+    document.getElementById("output").innerHTML=html+html2+html1;
     
 
 
@@ -57,17 +65,21 @@ class Employee{
     }
     
 
+      document.getElementById("button").addEventListener("click", ()=>{
+        var empl=new Employee();
+        empl.empclass();
+        empl.display();
 
-    function Addclass(){
+      });
+
         // empl.empclass();
         // empl.display();
     //     var empid=document.getElementById("empid").value;
     //  var empname=document.getElementById("empname").value;
     // var empsal = parseInt(document.getElementById("empsal").value);
-    var empl=new Employee();
-    empl.empclass();
-    empl.display();
-    };
+    
+  
+    
    
 
 
