@@ -22,22 +22,32 @@ class Employee{
          var empid=document.getElementById("empid").value
          var empname=document.getElementById("empname").value;
          var empsal = parseInt(document.getElementById("empsal").value);
+
+         try {
+              
          if(empid==""||empname==""||empsal==""){
-             document.getElementById("Validation").innerHTML="****PLEASE FILL ALL THE FIELDS TO PROCEED FURTHER****";
-
+            document.getElementById("Validation").innerHTML="****PLEASE FILL ALL THE FIELDS TO PROCEED FURTHER****";
          }else{
-              // }
-        var cart={};
-        cart.perid=document.getElementById("empid").value;
-        cart.pername=document.getElementById("empname").value;
-        cart.persal=document.getElementById("empsal").value;
-        empcart.push(cart);
-        empcart.forEach(element2=>{
-            element2.persal=30000;
-        });
-        this.display(); 
+            // }
+      var cart={};
+      cart.perid=document.getElementById("empid").value;
+      cart.pername=document.getElementById("empname").value;
+      cart.persal=document.getElementById("empsal").value;
+      
+      empcart.push(cart);
+      empcart.forEach(element2=>{
+        element2.persal=30000;
+    });
+     
+      this.display(); 
 
+       }
+             
+         } catch (error) {
+             console.log(error)
+             
          }
+       
         // constructor(id,name,basicsalary){
         //     this.id=id;
         //     this.name=name;
